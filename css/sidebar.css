@@ -16,7 +16,8 @@ body {
 }
 body .sidebar {
   width :200px;
-  box-shadow:0 0 10px #ddd;
+  height: 100%;
+  box-shadow:2px 0px 10px #ddd;
   padding: 20px 0px;
   display: flex;
   align-items: center;
@@ -60,9 +61,12 @@ body .sidebar div a {
   width: 100%;
   align-items:center;
   gap: 10px;
+  padding-left: 10px;
+  margin-bottom:5px;
   justify-content: flex-start;
   text-decoration: none;
   color: black;
+  border-radius: 8px;
 }
 body .sidebar div a:hover {
   background-color:#f1f5f9 ;
@@ -158,7 +162,7 @@ body .mainsection .search div:last-child i::after {
     padding: 0px;
   }
   body .sidebar div a{
-    margin-top: 25px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
