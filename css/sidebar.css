@@ -169,6 +169,7 @@ body .mainsection .search div:last-child i::after {
   }
   body .sidebar div a i{
     font-size: 22px;
+    padding: 10px;
   }
 }
 .highlight{
