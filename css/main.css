@@ -1,0 +1,106 @@
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+:root {
+  --maincolor:#f1f5f9;
+  --seccolor:#eee;
+  --blue:#0075ff;
+  --green:#22c55e;
+  --orange:#f59e0b;
+  --red:#f44336;
+  --gray:#888;
+  --transition: 0.3s;
+}
+.Wcontanier {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(450px ,1fr));
+}
+.Wcontanier .welcome{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  border-radius: 10px;
+}
+.Wcontanier .welcome >div:first-child{
+  position: relative; 
+  margin-left: 20px;
+  height: 150px;
+}
+.Wcontanier .welcome >div:first-child h2{
+  margin-bottom: 10px;
+}
+.Wcontanier .welcome >div:first-child p{
+  margin: 0px;
+}
+.Wcontanier .welcome >div:first-child img{
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  right: 0px;
+  top: -15px;
+}
+@media (max-width:767px) {
+  .Wcontanier .welcome div:first-child img{
+    display: none;
+  }
+}
+.Wcontanier .welcome >div:last-child{
+  background-color: white;
+}
+.Wcontanier .welcome >div:last-child  {
+  position: relative;
+}
+.Wcontanier .welcome >div:last-child > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  border-top: 1px solid var(--seccolor);
+  border-bottom: 1px solid var(--seccolor);
+  margin: 40px 0px;
+  padding: 10px;
+} 
+@media (max-width:767px) {
+  .Wcontanier .welcome >div:last-child > div{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+.Wcontanier .welcome >div:last-child div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.Wcontanier .welcome >div:last-child div div h4{
+  margin: 0px;
+  font-weight: 200;
+}
+.Wcontanier .welcome >div:last-child div div p{
+  margin: 0px;
+  color: var(--gray);
+}
+.Wcontanier .welcome >div:last-child img {
+  position: absolute;
+  z-index: 3;
+  top: -35px;
+  left: 20px;
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+  border: 6px solid white;
+}
+
+@media (max-width:767px) {
+  .Wcontanier .welcome >div:last-child img {
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
