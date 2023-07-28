@@ -16,7 +16,6 @@ body {
 }
 body .sidebar {
   width :200px;
-  height: 100%;
   box-shadow:0 0 10px #ddd;
   padding: 20px 0px;
   display: flex;
@@ -90,7 +89,8 @@ body .mainsection .search {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 20px;
+  margin:-20px;
+  padding: 20px;
   background-color: white;
 }
 body .mainsection .search div:first-child{
