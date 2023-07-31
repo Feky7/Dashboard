@@ -16,7 +16,8 @@ body {
 }
 body .sidebar {
   width :200px;
-  box-shadow:0 0 10px #ddd;
+  z-index: 1;
+  box-shadow: 0 0 10px #ddd;
   padding: 20px 0px;
   display: flex;
   align-items: center;
@@ -99,7 +100,7 @@ body .mainsection .search div:first-child{
 }
 body .mainsection .search div:first-child i {
   position: absolute;
-  top: 14px;
+  top: 13px;
   left: 10px;
   color: #888;
 }
@@ -170,14 +171,14 @@ body .mainsection .search div:last-child i::after {
     align-items: center;
   }
   body .sidebar div a i{
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 .highlight{
   background-color: #f1f5f9;
 }
 .mainsection .title {
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 30px;
   position: relative;
   font-weight: 600;

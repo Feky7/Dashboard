@@ -13,21 +13,43 @@
   --gray:#888;
   --transition: 0.3s;
 }
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
 .Wcontanier {
   display: grid;
   grid-template-columns: repeat(auto-fill , minmax(450px ,1fr));
+  gap: 10px;
 }
 @media (max-width:767px){
   .Wcontanier {
-    grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+    grid-template-columns: minmax(250px ,1fr);
   }
 }
+.Wcontanier > div {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.Wcontanier >div >p {
+  color: var(--gray);
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.Wcontanier >div >h2{
+  margin: 0px;
+}
 .Wcontanier .welcome{
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  background-color: #eee;
-  border-radius: 10px;
+  background-color: var(--seccolor);
+  padding: 0px;
 }
 .Wcontanier .welcome >div:first-child{
   position: relative; 
@@ -38,7 +60,8 @@
   margin-bottom: 10px;
 }
 .Wcontanier .welcome >div:first-child p{
-  margin: 0px;
+  font-size: 15px;
+  color: var(--gray);
 }
 .Wcontanier .welcome >div:first-child img{
   width: 180px;
@@ -108,4 +131,292 @@
     left: 50%;
     transform: translate(-50%);
   }
+}
+.Wcontanier .welcome a{
+  text-decoration: none;
+  width: fit-content;
+  padding:4px 8px;
+  background-color: var(--blue);
+  color: white;
+  position: absolute;
+  border-radius: 6px;
+  bottom: 10px;
+  right: 25px;
+  font-size: 14px;
+}
+.Wcontanier .Draft {
+  padding: 20px;
+  position: relative;
+}
+.Wcontanier .Draft p{
+  color: var(--gray);
+  font-size: 15px;
+}
+.Wcontanier .Draft form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 35px;
+  position: relative;
+}
+.Wcontanier .Draft form input ,
+.Wcontanier .Draft form textarea{
+  background-color: var(--seccolor);
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.Wcontanier .Draft form input::placeholder ,
+.Wcontanier .Draft form textarea::placeholder{
+  color: var(--gray);
+}
+.Wcontanier .Draft form textarea{
+  resize: none;
+  height: 150px;
+}
+.Wcontanier .Draft form input:focus ,
+.Wcontanier .Draft form textarea:focus{
+  outline: none;
+}
+.Wcontanier .Draft form input[type=submit]{
+  background-color: var(--blue);
+  color: white;
+  padding:4px 8px;
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+  font-size: 14px;
+}
+.Wcontanier .targets .child{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Wcontanier .targets .child .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.Wcontanier .targets .child .card i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  font-size: 20px;
+}
+.Wcontanier .targets .child > div:nth-child(1) i{
+  background-color: rgba(0, 119, 255, 0.20);
+  color: var(--blue);
+}
+.Wcontanier .targets .child > div:nth-child(2) i{
+  background-color: rgb(245, 158, 11 , 20%);
+  color: var(--orange);
+}
+.Wcontanier .targets .child > div:nth-child(3) i{
+  background-color: rgb(34, 197, 94 , 20%);
+  color: var(--green);
+}
+.Wcontanier .targets .child .card div p {
+  color: var(--gray);
+  font-size: 15px;
+  margin: 5px 0px 10px;
+}
+.Wcontanier .targets .child .card div span{
+  font-weight: 600;
+}
+.Wcontanier .targets .child .card div {
+  position: relative;
+  flex: 1;
+}
+.Wcontanier .targets .child .card div .perc1,
+.Wcontanier .targets .child .card div .perc2,
+.Wcontanier .targets .child .card div .perc3{
+  width: 100%;
+  margin-top: 10px;
+  height: 5px;
+  background-color: #0075ff;
+  position: relative;
+}
+.Wcontanier .targets .child .card div .perc1{
+  background-color: rgb(0, 119, 255 , 20%);
+}
+.Wcontanier .targets .child .card div .perc2{
+  background-color: rgb(245, 158, 11 , 20%);
+}
+.Wcontanier .targets .child .card div .perc3{
+  background-color: rgb(34, 197, 94 , 20%);
+}
+.Wcontanier .targets .child .card div .perc1 .area,
+.Wcontanier .targets .child .card div .perc2 .area,
+.Wcontanier .targets .child .card div .perc3 .area{
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.Wcontanier .targets .child .card div .perc1 .area{
+  background-color: var(--blue);
+  width: 30%;
+}
+.Wcontanier .targets .child .card div .perc2 .area{
+  background-color: var(--orange);
+  width: 20%;
+}
+.Wcontanier .targets .child .card div .perc3 .area{
+  background-color: var(--green);
+  width: 100%;
+}
+.Wcontanier .targets .child .card .perc1::before,
+.Wcontanier .targets .child .card .perc2::before,
+.Wcontanier .targets .child .card .perc3::before{
+  position: absolute;
+  color: white;
+  top: -25px;
+  width: 30px;
+  height: 12px;
+  padding: 3px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 12px;
+  transform: translate(-50%);
+}
+.Wcontanier .targets .child .card .perc1::before{
+  content: "30%";
+  left: 30%;
+  background-color: #0075ff;
+}
+.Wcontanier .targets .child .card .perc2::before{
+  content: "20%";
+  left: 20%;
+  background-color:var(--orange);
+}
+.Wcontanier .targets .child .card .perc3::before{
+  content: "100%";
+  left: 100%;
+  background-color: var(--green);
+}
+.Wcontanier .targets .child .card .perc1::after,
+.Wcontanier .targets .child .card .perc2::after,
+.Wcontanier .targets .child .card .perc3::after{
+  content: '';
+  position: absolute;
+  color: white;
+  height: 0px;
+  width: 0px;
+  top: -10px;
+  z-index: 3;
+  border: 8px solid;
+  transform: translate(-50%);
+}
+.Wcontanier .targets .child .card .perc1::after{
+  left: 30%;
+  border-color:var(--blue) transparent transparent transparent ;
+}
+.Wcontanier .targets .child .card .perc2::after{
+  left: 20%;
+  border-color:var(--orange) transparent transparent transparent ;
+}
+.Wcontanier .targets .child .card .perc3::after{
+  left: 100%;
+  border-color:var(--green) transparent transparent transparent ;
+}
+.Wcontanier .tickets>div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+.Wcontanier .tickets>div >div {
+  width:calc(50% - 10px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc ;
+  border-radius: 10px;
+}
+.Wcontanier .tickets>div >div i{
+  font-size: 25px;
+}
+@media (max-width:767px) {
+  .Wcontanier .tickets>div >div {
+    width: 100%;
+  }
+}
+.Wcontanier .tickets>div >div:nth-child(1) i{
+  color: var(--blue);
+}
+.Wcontanier .tickets>div >div:nth-child(2) i{
+  color: var(--orange);
+}
+.Wcontanier .tickets>div >div:nth-child(3) i{
+  color: var(--green);
+}
+.Wcontanier .tickets>div >div:nth-child(4) i{
+  color: var(--red);
+}
+.Wcontanier .tickets>div >div span {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px;
+}
+.Wcontanier .tickets>div >div p {
+  color: var(--gray);
+  font-size: 14px;
+  margin: 0;
+}
+.Wcontanier .news >div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+.Wcontanier .news .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width:767px) {
+  .Wcontanier .news .card {
+    flex-direction: column;
+  }
+}
+.Wcontanier .news .card .data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width:767px) {
+  .Wcontanier .news .card .data {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.Wcontanier .news .card .data div p{
+  margin: 10px 0;
+  font-size: 14px;
+  color: var(--gray);
+}
+.Wcontanier .news .card .data div span{
+  font-weight: 700;
+
+}
+.Wcontanier .news .card img {
+  width: 100px;
+  border-radius: 6px;
+}
+.Wcontanier .news .card .time {
+  background-color: var(--seccolor);
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.Wcontanier .news .card .time p {
+  margin: 0;
+  font-size: 12px;
 }
