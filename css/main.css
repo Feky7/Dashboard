@@ -426,8 +426,6 @@ p {
   margin: 0;
   font-size: 12px;
 }
-<<<<<<< HEAD
-=======
 .Wcontanier .tasks .con{
   display: flex;
   flex-direction: column;
@@ -714,7 +712,7 @@ p {
   content: "\f004";
   font:var(--fa-font-regular);
   position: absolute;
-  top: -1px;
+  top: 0px;
   left: -22px;
   font-size: 18px;
   color: var(--gray);
@@ -723,7 +721,7 @@ p {
   content: "\f004";
   font:var(--fa-font-solid);
   position: absolute;
-  top: -1px;
+  top: 0px;
   left: -22px;
   font-size: 18px;
   color: var(--red);
