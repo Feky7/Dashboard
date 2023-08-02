@@ -697,9 +697,6 @@ p {
   color: var(--gray);
   font-size:  16px;
 }
-.Wcontanier .posts .con .react .like form {
-
-}
 .Wcontanier .posts .con .react .like form input[type=checkbox] {
   display: none;
 }
@@ -712,7 +709,7 @@ p {
   content: "\f004";
   font:var(--fa-font-regular);
   position: absolute;
-  top: 0px;
+  top: 2px;
   left: -22px;
   font-size: 18px;
   color: var(--gray);
@@ -721,7 +718,7 @@ p {
   content: "\f004";
   font:var(--fa-font-solid);
   position: absolute;
-  top: 0px;
+  top: 2px;
   left: -22px;
   font-size: 18px;
   color: var(--red);
