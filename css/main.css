@@ -746,8 +746,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size:14px;
-  gap: 20px;
+  gap: 10px;
 }
 .Wcontanier .social .con .card div div {
   display: flex;
