@@ -589,7 +589,7 @@ p {
   height: 20px;
   background-color: var(--blue);
 }
-.Wcontanier .progress .con .card:nth-child(4) i {
+.Wcontanier .progress .con .card:nth-child(5) i {
   animation: fade 1.5s infinite ;
   transition-duration:var(--transition);
 }
