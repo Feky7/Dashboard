@@ -3,6 +3,19 @@
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: var(--maincolor);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(3, 112, 236) ;
+}
 html {
   box-sizing: border-box;
 }
@@ -25,6 +38,9 @@ p {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+.mainsection > div:nth-child(3) {
+  margin-top: 30px;
 }
 .Wcontanier {
   display: grid;
@@ -572,6 +588,11 @@ p {
   margin: 0px;
   font-size: 16px;
 }
+@media (max-width:767px) {
+  .Wcontanier .progress .con .card p {
+    font-size: 13px;
+  }
+}
 .Wcontanier .progress .con .card i{
   font-size: 22px;
   color: var(--blue);
@@ -828,16 +849,21 @@ p {
 }
 .projects .con table {
   min-width: 1000px;
-  max-width: 1fr;
+  width: 100%;
   max-width: 100%;
   border-collapse: separate;
 }
 .projects .con td {
   padding: 15px;
-  background-color: #eee;
-  font-weight: bold;
   display: table-cell;
   flex: 1;
+}
+.projects .con thead td {
+  background-color: #eee;
+  font-weight: bold;
+}
+.projects .con tbody td {
+  border: 1px solid #eee;
 }
 .projects .con img {
   width: 30px;
@@ -848,6 +874,193 @@ p {
 .projects .con td img:not(:first-child){
   margin-left: -15px;
 }
+.projects .con tbody td:last-child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects .con tbody td:last-child span{
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+}
+.projects .con tbody tr:nth-child(1) td:last-child span{
+  background-color: var(--orange);
+}
+.projects .con tbody tr:nth-child(2) td:last-child span{
+  background-color: var(--blue);
+}
+.projects .con tbody tr:nth-child(3) td:last-child span,
+.projects .con tbody tr:nth-child(4) td:last-child span,
+.projects .con tbody tr:nth-child(6) td:last-child span{
+  background-color: var(--green);
+}
+.projects .con tbody tr:nth-child(5) td:last-child span{
+  background-color: var(--red);
+}
+/* end main page */
+/* start settings page */
+.Acontanier {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(450px ,1fr));
+  gap: 10px;
+}
+@media (max-width:767px){
+  .Acontanier {
+    grid-template-columns: minmax(250px ,1fr);
+  }
+}
+.Acontanier > div {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.Acontanier >div >p {
+  color: var(--gray);
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.Acontanier >div >h2{
+  margin: 0px;
+}
+.Acontanier .site-control .con {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.Acontanier .site-control .con .card:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.Acontanier .site-control .con .card div p{
+  margin: 0px 0px 5px;
+  font-weight: bold;
+}
+.Acontanier .site-control .con .card div span{
+  color: var(--gray);
+  font-size: 13px;
+}
+.Acontanier .site-control .con textarea {
+  resize: none;
+  width: 100%;
+  font-size:13px ;
+  letter-spacing: 1px;
+  min-height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+}
+.Acontanier .site-control .con textarea::placeholder{
+  font-size: 13px;
+  letter-spacing: 0;
+}
+.Acontanier .site-control .con textarea:focus{
+  border: 1px solid #ccc;
+  outline: none;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: var(--blue);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--blue);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.Acontanier .general-info .con {
+  position: relative;
+}
+.Acontanier .general-info .con form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Acontanier .general-info .con form div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.Acontanier .general-info .con form label {
+  color: var(--gray);
+  font-size: 14px;
+}
+.Acontanier .general-info .con form input {
+  padding:10px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 6px ;
+  border: 1px solid #ccc;
+}
+.Acontanier .general-info .con form input:focus {
+  outline: none;
+}
+.Acontanier .general-info .con form div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Acontanier .general-info .con form a {
+  text-decoration: none;
+  color: var(--blue);
+}
+.Acontanier .general-info .con form div:nth-child(3) input {
+  cursor: no-drop;
+  background-color: var(--maincolor);
+}
+/* end setting page */
 /* animations */
 @keyframes fade {
   30%{
@@ -862,4 +1075,3 @@ https://elzerowebschool.github.io/HTML_And_CSS_Template_Four/
 http://127.0.0.1:5500/index.html
 https://fontawesome.com/search?q=love&o=r&m=free
 */
->>>>>>> 1c5efc2 (ff)
