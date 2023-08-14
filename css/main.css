@@ -1175,6 +1175,124 @@ p {
   appearance: none;
 }
 /* end setting page */
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(450px ,1fr));
+  gap: 10px;
+}
+@media (max-width:767px){
+  .plans {
+    grid-template-columns: minmax(250px ,1fr);
+  }
+}
+.plans > div {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.plans .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.plans .card .design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px;
+  position: relative;
+}
+.plans .card .design::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  border: 3px solid white;
+}
+.plans .card .design span:nth-child(1) {
+  font-size: 25px;
+  font-weight:bold;
+  color: white;
+}
+.plans .card .design span:nth-child(2) {
+  font-size: 35px;
+  letter-spacing: 1.6px;
+  position: relative;
+  color: white;
+}
+.plans .card .design span:nth-child(2)::after {
+  position: absolute;
+  content: "$";
+  left: -15px;
+  font-size:20px;
+  top: 0px;
+}
+.plans .card:nth-child(1) .design {
+  background-color: var(--green);
+}
+.plans .card:nth-child(2) .design {
+  background-color: var(--blue);
+}
+.plans .card:nth-child(3) .design {
+  background-color: var(--orange);
+}
+.plans .card .text {
+  padding: 0px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.plans .card .text > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.plans .card .text > div .data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.plans .card .text > div > i {
+  color: var(--gray);
+  font-size: 17px;
+  cursor: pointer;
+}
+.plans .card .text > div .data .fa-check{
+  color: var(--green);
+  font-size: 17px;
+}
+.plans .card .text > div .data .fa-xmark{
+  color: var(--red);
+  font-size: 17px;
+}
+.plans .card .text > div .data p {
+  font-size: 14px;
+}
+.plans .card .link a{
+  padding: 5px 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+}
+.plans .card:nth-child(1) .link a {
+  background-color: var(--green);
+}
+.plans .card:nth-child(2) .link a {
+  background-color: var(--blue);
+}
+.plans .card:nth-child(3) .link  {
+  margin: 0 auto;
+  font-size: 18px;
+  color: var(--gray);
+}
 /* animations */
 @keyframes fade {
   30%{
