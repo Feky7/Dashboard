@@ -744,7 +744,6 @@ p {
   font-size: 18px;
   color: var(--red);
 }
-
 .Wcontanier .social .con {
   margin-top: 30px;
   display: flex;
@@ -966,18 +965,18 @@ p {
   border: 1px solid #ccc;
   outline: none;
 }
-.switch {
+.switchbutton .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 28px;
 }
-.switch input {
+.switchbutton .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.slider {
+.switchbutton .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -988,7 +987,7 @@ p {
   -webkit-transition: .4s;
   transition: .4s;
 }
-.slider:before {
+.switchbutton .slider:before {
   position: absolute;
   content: "";
   display: flex;
@@ -1002,22 +1001,22 @@ p {
   -webkit-transition: .4s;
   transition: .4s;
 }
-input:checked + .slider {
+.switchbutton input:checked + .slider {
   background-color: var(--blue);
 }
-input:focus + .slider {
+.switchbutton input:focus + .slider {
   box-shadow: 0 0 1px var(--blue);
 }
-input:checked + .slider:before {
+.switchbutton input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-.slider.round {
+.switchbutton .slider.round {
   border-radius: 34px;
 }
 
-.slider.round:before {
+.switchbutton .slider.round:before {
   border-radius: 50%;
 }
 .Acontanier .general-info .con {
@@ -1059,6 +1058,121 @@ input:checked + .slider:before {
 .Acontanier .general-info .con form div:nth-child(3) input {
   cursor: no-drop;
   background-color: var(--maincolor);
+}
+.Acontanier .Security-Info .con {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.Acontanier .Security-Info .con .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.Acontanier .Security-Info .con .card .text p {
+  margin: 0px 0px 5px;
+}
+.Acontanier .Security-Info .con .card .text span{
+  color: var(--gray);
+  font-size: 13px;
+}
+.Acontanier .Security-Info .con .card .button a{
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.Acontanier .Security-Info .con .card:nth-child(1) .button a{
+  background-color: var(--blue);
+  color: white;
+}
+.Acontanier .Security-Info .con .card:nth-child(3) .button a{
+  background-color: var(--seccolor);
+  color:black;
+}
+.Acontanier .Social-Info .con {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Acontanier .Social-Info .con .card {
+  position: relative;
+}
+.Acontanier .Social-Info .con .card input{
+  width: 100%;
+  height: 100%;
+  padding: 10px 0px 10px 46px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  background-color: #f6f6f6;
+}
+.Acontanier .Social-Info .con .card input:focus{
+  border: 1px solid #ccc;
+  outline: none;
+}
+.Acontanier .Social-Info .con .card i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 13px;
+  color: var(--gray);
+  transition-duration: var(--transition);
+}
+.Acontanier .Social-Info .con .card:nth-child(1) input:focus + i {
+  color: #1da1f2;
+}
+.Acontanier .Social-Info .con .card:nth-child(2) input:focus + i {
+  color: #1778f2;
+}
+.Acontanier .Social-Info .con .card:nth-child(3) input:focus + i {
+  color: #0072b1;
+}
+.Acontanier .Social-Info .con .card:nth-child(4) input:focus + i {
+  color: #c4302b;
+}
+.Acontanier .Social-Info .con .card::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 36px;
+}
+.Acontanier .Widgets-Control .con form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Acontanier .Widgets-Control .con form div label {
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+}
+.Acontanier .Widgets-Control .con form div label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 15px;
+  border-radius: 6px;
+  height: 15px;
+  border: 2px solid var(--gray);
+}
+.Acontanier .Widgets-Control .con form div input:checked + label::after {
+  content: "\f058";
+  font-family:var(--fa-font-solid);
+  position: absolute;
+  left: 0px;
+  width: 19px;
+  border-radius: 6px;
+  height: 19px;
+  color: white;
+  background-color: var(--blue);
+}
+.Acontanier .Widgets-Control .con form div input {
+  appearance: none;
 }
 /* end setting page */
 /* animations */
