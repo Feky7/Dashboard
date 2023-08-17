@@ -1151,24 +1151,34 @@ p {
   padding-left: 30px;
   position: relative;
 }
+.Acontanier .Widgets-Control .con form div label:hover:before {
+  border-color: var(--blue);
+}
 .Acontanier .Widgets-Control .con form div label::before {
   content: "";
   position: absolute;
   left: 0px;
-  width: 15px;
-  border-radius: 6px;
-  height: 15px;
+  top: 0px;
+  width: 16px;
+  border-radius: 4px;
+  height: 16px;
   border: 2px solid var(--gray);
+  transition-duration: var(--transition);
 }
 .Acontanier .Widgets-Control .con form div input:checked + label::after {
-  content: "\f058";
-  font-family:var(--fa-font-solid);
+  content: "✔";
   position: absolute;
   left: 0px;
-  width: 19px;
-  border-radius: 6px;
-  height: 19px;
+  top: 0px;
+  width: 20px;
+  font-size: 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
   color: white;
+  padding: 0.5px 0px 0px 0.5px;
   background-color: var(--blue);
 }
 .Acontanier .Widgets-Control .con form div input {
@@ -1291,6 +1301,211 @@ p {
 .plans .card:nth-child(3) .link  {
   margin: 0 auto;
   font-size: 18px;
+  color: var(--gray);
+}
+/* friends page */
+.friends-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px ,1fr));
+  gap: 20px;
+}
+@media (max-width:767px){
+  .friends-page {
+    grid-template-columns: minmax(200px ,1fr);
+  }
+}
+.friends-page .card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  background-color: white;
+  gap: 15px;
+  border-radius: 10px;
+}
+.friends-page .card .design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.friends-page .card .design img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.friends-page .card .design > a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: #eee;
+  border-radius: 50%;
+  transition-duration: var(--transition);
+}
+.friends-page .card .design > a:nth-child(1) {
+  top: -20px;
+  left: -10px;
+}
+.friends-page .card .design > a:nth-child(2) {
+  top: -20px;
+  left: 30px;
+}
+.friends-page .card .design > a i {
+  transition-duration: var(--transition);
+
+  color: var(--gray);
+}
+.friends-page .card .design > a:hover {
+  background-color: var(--blue);
+}
+.friends-page .card .design > a:hover i {
+  color:white;
+}
+.friends-page .card .design p {
+  margin: 15px 0px 5px;
+  font-weight: bold;
+}
+.friends-page .card .design span {
+  font-size: 14px;
+  color: var(--gray);
+}
+.friends-page .card .data {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top:15px ;
+  border-top: 1px solid #eee;
+}
+.friends-page .card .data div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.friends-page .card .data img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  top: 50%;
+  opacity: 20%;
+  transform: translateY(-50%);
+}
+.friends-page .card .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top:15px ;
+  border-top: 1px solid #eee;
+}
+.friends-page .card .links span {
+  color: var(--gray);
+  font-size: 13px;
+}
+.friends-page .card .links div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.friends-page .card .links div a {
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+.friends-page .card .links div a:nth-child(1){
+  background-color: var(--blue);
+}
+.friends-page .card .links div a:nth-child(2){
+  background-color: var(--red);
+}
+/* courses page */
+.courses-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px ,1fr));
+  gap: 20px;
+}
+@media (max-width:767px){
+  .courses-page {
+    grid-template-columns: minmax(200px ,1fr);
+  }
+}
+.courses-page .card  {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+.courses-page .card  .design {
+  position: relative;
+  max-width: 100%;
+}
+.courses-page .card  .design img:nth-child(1){
+  width: 100%;
+  height: 300px;
+}
+.courses-page .card  .design img:nth-child(2) {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
+  left: 20px;
+  border: 2px solid white;
+}
+.courses-page .card .data {
+  padding: 20px;
+}
+.courses-page .card .data p {
+  margin: 0px 0px 15px;
+  font-weight: bold;
+}
+.courses-page .card .data span {
+  color: var(--gray);
+  font-size: 15px;
+}
+.courses-page .card .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 15px 15px;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+.courses-page .card .links a {
+  position: absolute;
+  text-decoration: none;
+  left: 50%;
+  top: -14px;
+  transform: translateX(-50%) ;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: var(--blue);
+  color: white;
+  font-size: 14px;
+}
+.courses-page .card .links div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--gray);
+}
+.courses-page .card .links div i {
   color: var(--gray);
 }
 /* animations */
