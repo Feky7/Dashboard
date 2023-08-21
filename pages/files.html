@@ -1,65 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/all.min.css">
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/sidebar.css">
-  <title>Files</title>
-</head>
-<body>
-  <div class="sidebar">
-    <h1>Elzero</h1>
-    <div>
-      <a href="../index.html">
-        <i class="fa-solid fa-house"></i>
-        <p>Dashboard</p>
-      </a>
-      <a href="settings.html">
-        <i class="fa-solid fa-gear"></i>
-        <p>Settings</p>
-      </a>
-      <a href="profile.html">
-        <i class="fa-regular fa-user"></i>
-        <p>Profile</p>
-      </a>
-      <a href="projects.html">
-        <i class="fa-solid fa-diagram-project"></i>
-        <p>Projects</p>
-      </a>
-      <a href="courses.html">
-        <i class="fa-solid fa-chalkboard-user"></i>
-        <p>Courses</p>
-      </a>
-      <a href="friends.html">
-        <i class="fa-solid fa-people-group"></i>
-        <p>Friends</p>
-      </a>
-      <a href="files.html" class="highlight">
-        <i class="fa-solid fa-file-lines"></i>
-        <p>Files</p>
-      </a>
-      <a href="plans.html">
-        <i class="fa-solid fa-money-check-dollar"></i>
-        <p>Plans</p>
-      </a>
-    </div>
-  </div>
-  <div class="mainsection">
-    <div class="search">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <title>Files</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1>Elzero</h1>
       <div>
-        <input type="search" placeholder="Type A Keyword">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
-      <div>
-        <i class="fa-solid fa-bell"></i>
-        <img src="../src/search.jpg" alt="">
+        <a href="../index.html">
+          <i class="fa-solid fa-house"></i>
+          <p>Dashboard</p>
+        </a>
+        <a href="settings.html">
+          <i class="fa-solid fa-gear"></i>
+          <p>Settings</p>
+        </a>
+        <a href="profile.html">
+          <i class="fa-regular fa-user"></i>
+          <p>Profile</p>
+        </a>
+        <a href="projects.html">
+          <i class="fa-solid fa-diagram-project"></i>
+          <p>Projects</p>
+        </a>
+        <a href="courses.html">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <p>Courses</p>
+        </a>
+        <a href="friends.html">
+          <i class="fa-solid fa-people-group"></i>
+          <p>Friends</p>
+        </a>
+        <a href="files.html" class="highlight">
+          <i class="fa-solid fa-file-lines"></i>
+          <p>Files</p>
+        </a>
+        <a href="plans.html">
+          <i class="fa-solid fa-money-check-dollar"></i>
+          <p>Plans</p>
+        </a>
       </div>
     </div>
-    <div class="title">Files</div>
-  </div>
-</body>
+    <div class="mainsection">
+      <div class="search">
+        <div>
+          <input type="search" placeholder="Type A Keyword" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div>
+          <i class="fa-solid fa-bell"></i>
+          <img src="../src/search.jpg" alt="" />
+        </div>
+      </div>
+      <div class="title">Files</div>
+      <div class="filespage">
+        <div class="statistics">
+          <p>Files Statistics</p>
+          <div class="con">
+            <div class="card">
+              <div class="data">
+                <div><i class="fa-regular fa-file-pdf"></i></div>
+                <div class="text">
+                  <p>PDF Files</p>
+                  <span>130 Files</span>
+                </div>
+              </div>
+              <div class="size">6.5GB</div>
+            </div>
+            <div class="card">
+              <div class="data">
+                <div><i class="fa-regular fa-image"></i></div>
+                <div class="text">
+                  <p>Images</p>
+                  <span>115 Files</span>
+                </div>
+              </div>
+              <div class="size">3.5GB</div>
+            </div>
+            <div class="card">
+              <div class="data">
+                <div><i class="fa-regular fa-file-word"></i></div>
+                <div class="text">
+                  <p>Word Files</p>
+                  <span>110 Files</span>
+                </div>
+              </div>
+              <div class="size">3.2GB</div>
+            </div>
+            <div class="card">
+              <div class="data">
+                <div><i class="fa-solid fa-file-csv"></i></div>
+                <div class="text">
+                  <p>CSV Files</p>
+                  <span>99 Files</span>
+                </div>
+              </div>
+              <div class="size">2.9GB</div>
+            </div>
+          </div>
+        </div>
+        <div class="files-sec">
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file1.svg" alt="" />
+              <span>my-file.pdf</span>
+            </div>
+            <div class="publisher">Elzero</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>5.5MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file2.svg" alt="" />
+              <span>my-file.avi</span>
+            </div>
+            <div class="publisher">Admin</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>12.5MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file3.svg" alt="" />
+              <span>my-file.eps</span>
+            </div>
+            <div class="publisher">Uploader</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>2.7MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file4.svg" alt="" />
+              <span>my-file-psd</span>
+            </div>
+            <div class="publisher">Osama</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>15.1MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file5.svg" alt="" />
+              <span>my-file.dll</span>
+            </div>
+            <div class="publisher">Coder</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>2.2MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file6.svg" alt="" />
+              <span>my-file.png</span>
+            </div>
+            <div class="publisher">Designer</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>1.1MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file5.svg" alt="" />
+              <span>my-file.dll</span>
+            </div>
+            <div class="publisher">Coder</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>2.2MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file6.svg" alt="" />
+              <span>my-file.png</span>
+            </div>
+            <div class="publisher">Designer</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>1.1MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file2.svg" alt="" />
+              <span>my-file.avi</span>
+            </div>
+            <div class="publisher">Admin</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>12.5MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file3.svg" alt="" />
+              <span>my-file.eps</span>
+            </div>
+            <div class="publisher">Uploader</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>2.7MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file4.svg" alt="" />
+              <span>my-file-psd</span>
+            </div>
+            <div class="publisher">Osama</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>15.1MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file5.svg" alt="" />
+              <span>my-file.dll</span>
+            </div>
+            <div class="publisher">Coder</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>2.2MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file6.svg" alt="" />
+              <span>my-file.png</span>
+            </div>
+            <div class="publisher">Designer</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>1.1MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file5.svg" alt="" />
+              <span>my-file.dll</span>
+            </div>
+            <div class="publisher">Coder</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>2.2MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file6.svg" alt="" />
+              <span>my-file.png</span>
+            </div>
+            <div class="publisher">Designer</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>1.1MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file2.svg" alt="" />
+              <span>my-file.avi</span>
+            </div>
+            <div class="publisher">Admin</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>12.5MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file3.svg" alt="" />
+              <span>my-file.eps</span>
+            </div>
+            <div class="publisher">Uploader</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>2.7MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file4.svg" alt="" />
+              <span>my-file-psd</span>
+            </div>
+            <div class="publisher">Osama</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>15.1MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file5.svg" alt="" />
+              <span>my-file.dll</span>
+            </div>
+            <div class="publisher">Coder</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>2.2MB</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="design">
+              <i class="fa-solid fa-download"></i>
+              <img src="../src/file6.svg" alt="" />
+              <span>my-file.png</span>
+            </div>
+            <div class="publisher">Designer</div>
+            <div class="data">
+              <span>16/5/2021</span>
+              <span>1.1MB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
